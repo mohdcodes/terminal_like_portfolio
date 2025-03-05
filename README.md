@@ -9,11 +9,8 @@ A modern, interactive terminal-style portfolio website with AI integration and b
 - 🖥️ Terminal-like interface with modern UI
 - 🤖 AI Assistant with dual modes (Personal & General)
 - 🎨 Dynamic themes and animations
-- 🔊 Voice input support
 - 💬 Emoji reactions
 - 🌓 Dark/Light mode
-- 📱 Fully responsive design
-- ⌨️ Command auto-completion
 - 🔍 Interactive command history
 
 ## 🛠️ Tech Stack
@@ -120,4 +117,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email your.email@example.com or open an issue in the repository.
+For support, email arbaazcode@gmail.com or open an issue in the repository.
