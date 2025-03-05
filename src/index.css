@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  color: #33ff33;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.terminal-scrollbar::-webkit-scrollbar .terminal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 4px;
+}
+
+.terminal-window {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.terminal-header {
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  border-bottom: 1px solid #334155;
+}
+
+.terminal-content {
+  background-color: rgba(15, 23, 42, 0.7);
+}
+
+.command-keyword {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.command-subcommand {
+  color: #a78bfa;
+  font-weight: 500;
+}
+
+.command-prompt {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.command-result-title {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #334155;
+  margin-bottom: 0.5rem;
+}
+
+.command-result-link {
+  color: #22d3ee;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.command-result-highlight {
+  color: #a3e635;
+}
+
+.terminal-input-container {
+  border-top: 1px solid #334155;
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+.cursor-blink {
+  width: 10px;
+  height: 18px;
+  background-color: #33ff33;
+  animation: blink 1s step-end infinite;
+  box-shadow: 0 0 8px rgba(51, 255, 51, 0.6);
+  border-radius: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.glow-text {
+  text-shadow: 0 0 5px rgba(51, 255, 51, 0.3);
+}
+
+/* ASCII Art Styling */
+.ascii-art {
+  color: #10b981;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  white-space: pre;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Project Table Styling */
+.project-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-table th,
+.project-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #334155;
+}
+
+.project-table th {
+  background-color: #1e293b;
+  color: #f59e0b;
+  font-weight: 600;
+  text-align: left;
+}
+
+.project-table tr:last-child td {
+  border-bottom: none;
+}
+
+.project-table .project-name {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.project-table .project-description {
+  color: #d1d5db;
+}
+
+.project-table .project-link {
+  color: #22d3ee;
+  text-decoration: underline;
+}
+
+/* Enhanced styling for sections */
+a {
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  filter: brightness(1.2);
+}
+
+/* Enhanced AI Chatbot Styling */
+.ai-chatbot-container {
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(51, 255, 51, 0.2);
+  box-shadow: 0 0 30px rgba(51, 255, 51, 0.1);
+}
+
+.ai-message {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(16, 185, 129, 0.05), rgba(59, 130, 246, 0.05));
+  z-index: -1;
+}
+
+.user-message {
+  position: relative;
+  overflow: hidden;
+}
+
+.user-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+  z-index: -1;
+}
+
+/* Enhanced Terminal Animations */
+@keyframes terminalGlow {
+  0% { box-shadow: 0 0 20px rgba(51, 255, 51, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(51, 255, 51, 0.2); }
+  100% { box-shadow: 0 0 20px rgba(51, 255, 51, 0.1); }
+}
+
+.terminal-window {
+  animation: terminalGlow 4s ease-in-out infinite;
+}
+
+/* Enhanced Input Focus */
+input:focus {
+  box-shadow: 0 0 0 2px rgba(51, 255, 51, 0.3);
+  outline: none;
+}
+
+/* Modern Chatbot UI Enhancements */
+.message-bubble {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.message-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  z-index: -1;
+}
+
+.message-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass morphism effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design utilities */
+@media (max-width: 480px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .tablet-adjust {
+    width: 90% !important;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Voice input animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.4; }
+  100% { transform: scale(0.8); opacity: 0.8; }
+}
+
+.pulse-animation {
+  animation: pulse-ring 2s ease-out infinite;
+}

@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "AORA - AI Generated Media Sharing App": {
+      "description": "In this app, users can learn about how AI can be useful for them in their day-to-day life and businesses.",
+      "github": "https://github.com/mohdcodes/aora-ai"
+    },
+    "CSV Wizard": {
+      "description": "In this app, the user can manipulate their data file with the help of AI.",
+      "github": "https://github.com/mohdcodes/csv-wizard"
+    }
+  },
+  "about": {
+    "bio": "I am a software engineer."
+  },
+  "contact": {
+    "LinkedIn": "https://www.linkedin.com/in/mohdcodes",
+    "GitHub": "https://www.github.com/mohdcodes",
+    "LeetCode": "https://www.leetcode.com/mohdcodes",
+    "Email": "arbaazcode@gmail.com"
+  }
+}
