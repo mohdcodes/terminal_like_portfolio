@@ -40,7 +40,7 @@ type ThemeColor = 'blue' | 'purple' | 'green' | 'orange' | 'pink';
 // Initialize Gemini API with error handling
 const initializeGeminiApi = () => {
   try {
-    const apiKey = 'AIzaSyBEKmQSiTsHaIjIa87hKVCKBwbhaEGjBUo';
+    const apiKey = 'your_api-key';
     const genAI = new GoogleGenerativeAI(apiKey);
     return genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
   } catch (error) {
