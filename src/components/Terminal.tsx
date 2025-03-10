@@ -58,7 +58,7 @@ export const Terminal: React.FC<TerminalProps> = ({
             <span className="command-keyword">arbaazcode</span>
             <span> </span>
             <span className="command-subcommand">
-              {parts.slice(1).join(' ')}
+              {parts.slice(1).join(' ')} 
             </span>
           </>
         );
@@ -101,7 +101,7 @@ export const Terminal: React.FC<TerminalProps> = ({
     <div className="flex-1 flex flex-col overflow-hidden">
       <div
         ref={terminalRef}
-        className="flex-1 p-4 overflow-y-auto terminal-scrollbar terminal-content"
+        className="flex-1 p-4 overflow-y-auto terminal-scrollbar terminal-content px-16"
       >
         {isLoading ? (
           <div className="flex items-center justify-center h-full">

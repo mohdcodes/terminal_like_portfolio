@@ -153,23 +153,24 @@ export class CommandProcessor {
 
   private aboutCommand(): string[] {
     return [
-      "<div class='space-y-6'>",
-      "  <div class='p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl backdrop-blur-sm border border-purple-500/30'>",
-      "    <h2 class='text-2xl font-bold text-purple-300 mb-4'>👋 About Me</h2>",
-      "    <div class='prose prose-invert'>",
-      `      <p class='text-xl text-gray-300 leading-relaxed'>${userData.about.bio}</p>`,
+      "<div class='space-y-10 flex justify-center'>",
+      "  <div class='p-6 bg-gradient-to-r from-purple-800/40 via-purple-600/20 to-pink-700/30 rounded-3xl border border-purple-500/50 backdrop-blur-lg shadow-xl transition-all duration-500 hover:shadow-purple-500/40 hover:border-purple-400/60'>",
+      "    <h2 class='text-4xl font-extrabold text-purple-300 mb-6 tracking-wider drop-shadow-lg animate-fadeIn'>👋 About Me</h2>",
+      "    <div class='prose prose-invert max-w-none'>",
+      `      <p class='text-lg md:text-xl text-gray-300 leading-relaxed tracking-wide font-light'>${userData.about.bio}</p>`,
       "    </div>",
       "  </div>",
       "</div>"
     ];
-  }
+}
+
 
   private contactCommand(): string[] {
     const output = [
-      "<div class='space-y-6'>",
-      "  <div class='p-6 bg-gradient-to-r from-green-600/20 to-teal-600/20 rounded-xl backdrop-blur-sm border border-green-500/30'>",
-      "    <h2 class='text-2xl font-bold text-green-300 mb-4'>📬 Let's Connect!</h2>",
-      "    <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>"
+      "<div class='space-y-8 px-6 md:px-8'>",
+      "  <div class='p-8 bg-gray-900/50 border border-gray-700/50 rounded-2xl shadow-xl backdrop-blur-lg'>",
+      "    <h2 class='text-3xl font-bold text-green-400 mb-6 flex items-center gap-2'>📬 Let's Connect!</h2>",
+      "    <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>"
     ];
     
     Object.entries(userData.contact).forEach(([platform, link]) => {
@@ -177,13 +178,13 @@ export class CommandProcessor {
       output.push(`
         <a href="${platform.toLowerCase() === 'email' ? `mailto:${link}` : link}" 
            target="${platform.toLowerCase() === 'email' ? '_self' : '_blank'}"
-           class='group p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1'>
-          <div class='flex items-center space-x-3'>
+           class='group flex items-center gap-4 p-5 bg-gray-800/60 border border-gray-700 rounded-xl hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-green-400/30 transform hover:-translate-y-1 hover:scale-105'>
+          <div class='text-3xl text-green-400 transition-transform duration-300 group-hover:scale-110'>
             ${icon}
-            <div>
-              <h3 class='text-lg font-semibold text-gray-300'>${platform}</h3>
-              <p class='text-gray-400 group-hover:text-cyan-400 transition-colors'>${link}</p>
-            </div>
+          </div>
+          <div>
+            <h3 class='text-lg font-semibold text-gray-200 group-hover:text-green-300 transition-colors'>${platform}</h3>
+            <p class='text-gray-400 group-hover:text-cyan-400 text-sm transition-colors break-all leading-tight'>${link}</p>
           </div>
         </a>
       `);
@@ -202,7 +203,13 @@ export class CommandProcessor {
     const icons: Record<string, string> = {
       LinkedIn: `<svg class='w-6 h-6 text-blue-400' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'/><rect x='2' y='9' width='4' height='12'/><circle cx='4' cy='4' r='2'/></svg>`,
       GitHub: `<svg class='w-6 h-6 text-purple-400' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'/></svg>`,
-      LeetCode: `<svg class='w-6 h-6 text-yellow-400' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'/><rect x='2' y='9' width='4' height='12'/><circle cx='4' cy='4' r='2'/></svg>`,
+      LeetCode: `<svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     style="filter: drop-shadow(0 0 8px rgba(255, 255, 0, 0.8));">
+  <path d="M16 18l6-6-6-6"/>
+  <path d="M8 6L2 12l6 6"/>
+  <path d="M14 4l-4 16"/>
+</svg>
+`,
       Email: `<svg class='w-6 h-6 text-red-400' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/><polyline points='22,6 12,13 2,6'/></svg>`
     };
     

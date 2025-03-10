@@ -1,16 +1,24 @@
 {
   "projects": {
-    "AORA - AI Generated Media Sharing App": {
-      "description": "In this app, users can learn about how AI can be useful for them in their day-to-day life and businesses.",
-      "github": "https://github.com/mohdcodes/aora-ai"
-    },
     "CSV Wizard": {
-      "description": "In this app, the user can manipulate their data file with the help of AI.",
-      "github": "https://github.com/mohdcodes/csv-wizard"
+      "description": "CSV Wizard is an AI-powered tool that simplifies data manipulation for users who may not be familiar with programming or Excel formulas. Using natural language commands, users can clean, filter, sort, and visualize their data effortlessly. The tool integrates OpenAI’s API to process queries and generate insightful reports, making data analysis more intuitive and accessible. The UI is created using Lovable.dev",
+      "github": "https://github.com/mohdcodes"
+    },
+    "Idea Nation": {
+      "description": "Idea Nation is a collaborative platform where aspiring entrepreneurs can share their startup ideas with the world. The app fosters innovation by allowing users to pitch their concepts, receive feedback, and connect with potential co-founders or investors. It also enables individuals to request partnerships and contribute their skills to promising startups, creating a dynamic ecosystem for idea exchange and growth.",
+      "github": "https://github.com/mohdcodes"
+    },
+    "Terminal Portfolio": {
+      "description": "Terminal Portfolio is a uniquely designed personal website that mimics the aesthetics and functionality of a Linux terminal. Inspired by Bash, it provides an interactive CLI-like experience where visitors can enter commands to explore projects, view contact details, and learn more about the developer. The minimalist yet engaging UI offers a fresh take on traditional portfolio websites, making it an ideal showcase for tech enthusiasts.",
+      "github": "https://github.com/mohdcodes"
+    },
+    "AORA": {
+      "description": "AORA is a next-generation real-time media-sharing platform that leverages AI to validate and enhance user-generated content. It allows users to explore the impact of artificial intelligence in everyday life and business, providing insights into AI-driven tools and applications. With built-in content verification, AORA ensures authenticity and quality while fostering a community for AI-driven creativity and collaboration.",
+      "github": "https://github.com/mohdcodes"
     }
   },
   "about": {
-    "bio": "I am a software engineer."
+    "bio": "Hi, I’m Mohd Arbaaz Siddiqui, a Software Engineer, AI enthusiast, and Full-Stack Developer with a strong passion for building scalable and impactful solutions. I’m currently pursuing my Bachelor’s in Computer Science with AI at Pranveer Singh Institute of Technology. I’ve had hands-on experience working as a Data Scientist Intern at DevTown, where I designed efficient Python algorithms and built reliable data pipelines using Apache Spark. Alongside that, I’ve worked as a freelance online tutor, delivering over 700+ hours of instruction in Mathematics, Physics, Python, and C++, helping students strengthen their programming skills. I’ve worked on some exciting projects, including CSV Wizard, an AI-powered tool that enables natural language-driven data manipulation, and AORA, a real-time media-sharing app that validates AI-generated content. My expertise includes React, React Native, JavaScript, Python, C++, SQL, Docker, and cloud-based technologies. I’m an active problem solver and ranked 17th in my college on GeeksforGeeks. I was also recognized among the top 20 out of 250 interns at DevTown for my contributions to project development. Additionally, I placed in the top 8% globally in the All India Common Internship Test. Beyond coding, I enjoy playing chess, football, and reading books. I’m always looking for opportunities to solve real-world problems through technology, AI, and cloud computing."
   },
   "contact": {
     "LinkedIn": "https://www.linkedin.com/in/mohdcodes",
